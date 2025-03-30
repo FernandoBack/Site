@@ -1,1 +1,187 @@
+/* Reset básico para remover margens e preenchimentos padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Definição do fundo */
+body {
+  background-color: black; /* Fallback para evitar fundo branco */
+  background-image: url('https://www.anoregrj.com.br/wp-content/uploads/2024/12/tecnologia-na-gestao-das-empresas-1-1.jpg'); /* Nova imagem de fundo fixa */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  min-height: 100vh; /* Garante que o fundo ocupe toda a tela */
+  color: white;
+  text-align: center;
+  padding: 20px;
+  position: relative;
+}
+
+/* Camada de sobreposição semitransparente */
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Cor preta com 40% de opacidade */
+  z-index: -1; /* Coloca a sobreposição atrás do conteúdo */
+}
+
+/* Estilização do cabeçalho */
+header {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00ffcc;
+}
+
+h1 {
+  font-size: 2.5em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Estilização do conteúdo principal */
+main, section {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 1.2em;
+  line-height: 1.6;
+}
+
+/* Estilização da imagem de perfil */
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-top: 15px;
+}
+
+/* Estilização da tabela */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid white;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: rgba(0, 255, 204, 0.3);
+}
+
+/* Botões estilizados */
+button, input[type="submit"] {
+  background: #00ffcc;
+  color: #000;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: 0.3s;
+  margin-top: 10px;
+}
+
+button:hover, input[type="submit"]:hover {
+  background: #00cca3;
+}
+
+/* Rodapé estilizado */
+footer {
+  margin-top: 20px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 10px;
+  font-size: 0.9em;
+}
+
+/* Estilização da seção de habilidades */
+#habilidades {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+#habilidades table {
+  margin-top: 20px;
+}
+
+#habilidades table th {
+  background: rgba(0, 255, 204, 0.3);
+}
+
+/* Animação de fade-in para as seções */
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Animação do vídeo */
+#video iframe {
+  opacity: 0;
+  animation: fadeInUp 2s forwards;
+  margin-top: 20px;
+}
+
+/* Estilização para a seção de vídeo */
+#video {
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
 
